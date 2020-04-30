@@ -1,0 +1,14 @@
+.xcontainer{
+    display: grid;
+    background-color: rgb(214, 214, 214);
+    margin: 30px;
+    /*grid-template-rows: 6rem 20rem 15rem 10rem 10rem 18rem 7rem;*/
+    grid-auto-rows: auto;
+    grid-template-columns: 33% 33% 34%;
+    overflow: hidden; 
+    border-radius: 2%;
+    grid-template-areas: "hd hd hd hd hd hd hd hd"
+                         "rp rp rp rp rp rp rp rp"
+                         "mr mr mr mr mr mr mr mr"
+                         "ft ft ft ft ft ft ft ft";
+}

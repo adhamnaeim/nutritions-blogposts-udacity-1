@@ -1,0 +1,376 @@
+@import url("rep.css");
+@import url(index-tablet-style.css);
+@import url(index-laptop-style.css);
+
+.container{
+    
+    display: grid;
+    background-color: rgb(214, 214, 214);
+    margin: 30px;
+    /*grid-template-rows: 6rem 20rem 15rem 10rem 10rem 18rem 7rem;*/
+    grid-auto-rows: auto;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-areas: "hd hd hd hd hd hd hd hd"
+                         "dp dp dp dp dp dp dp dp"
+                         "rp rp rp rp rp rp rp rp"
+                         "su su su su su su su su"
+                         "nl nl nl nl nl nl nl nl"
+                         "am am am am am am am am"
+                         "ft ft ft ft ft ft ft ft";
+    overflow: hidden; 
+    border-radius: 2%;
+
+}
+
+.box{
+    background-color: rgb(224, 224, 224);
+    border: 2px dashed rgb(153, 153, 153);
+    padding: 1%;
+    border-radius: 4%;
+    margin: 1%;
+}
+.invbox{
+    border: 2px hidden;
+    margin: 0px 10px 0px 10px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+h1{
+    font-family: 'Fira Sans', sans-serif;
+    color: rgb(240, 136, 40);
+    text-shadow: 3px 3px 5px black;
+}
+
+h2{
+    text-transform: capitalize;
+    font-family: 'Inconsolata', monospace;
+    font-size: 150%;
+    color: rgb(240, 136, 40);
+    text-shadow: 1px 1px 3px  black;
+    
+}
+
+h3{
+    font-style: italic; 
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+    
+}
+
+.displayPh-image img{
+    transition: 0.2s;
+}
+
+.displayPh-image img:hover{
+    border: 3px solid rgb(240, 136, 40);
+}
+
+a:hover{
+    text-shadow: 1px 1px 3px rgb(240, 136, 40);
+    color:black;
+}
+
+
+
+header{
+    grid-area: hd;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    width: 10%;
+    align-items: center;
+}
+
+.logo img{
+    width: 100%;
+    padding-top: 10%;
+}
+
+.brandname{
+    width: 90%;
+}
+
+/*--------------------------------*/
+.displayPh{
+    grid-area: dp;
+    text-align:center;   
+}
+
+.displayPh-grid{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.displayPh-image{
+    overflow: hidden;
+    margin: 1%;
+}
+.displayPh-image img{
+    width: 50%;
+    margin: 1%;
+    border-radius: 3%;
+}
+
+/*--------------------------------*/
+.recipes{
+    grid-area: rp;
+    text-align: center;
+    line-height: 210%;
+    
+}
+
+.recipesgrid{
+    /*padding: 3%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align:left;
+    align-items: fl;
+    */display: flex;
+    flex-direction: column;
+}
+
+.newsSignup{
+    grid-area: su;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+.signuptext{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    
+}
+.signupgrid{
+        display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.newsletter{
+    grid-area: nl;
+    list-style-position: inside;
+    
+
+
+}
+
+ul,ol {
+    padding: 0;
+}
+
+li{ /*difference*/
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    list-style: none;
+}
+
+.newsbullet{
+    line-height: 100%;
+        display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.newsbullet ul li{
+    margin:4%;
+}
+
+
+.aboutme{
+    grid-area: am;
+    padding: 3%;
+}
+
+.aboutmegrid{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
+    
+}
+
+.signupgrid{
+    padding: 3%;
+}
+
+#aboutmepic{
+    background-image: url(images/me.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin:0 5%;
+    background-position: right;
+    border-radius: 3%;
+}
+
+footer{
+    grid-area: ft;
+    
+    
+}
+.footergrid{
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+}
+
+/*-footer box END*/
+
+.newsbullet .invbox{
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-radius:5%;
+    margin: 0% 1%;
+}
+
+/*tablet*/
+@media (min-width:900px) and (max-width:1100px){
+    
+    .container{
+    display: grid;
+    background-color: rgb(214, 214, 214);
+    margin: 30px;
+    /*grid-template-rows: 6rem 20rem 15rem 10rem 10rem 18rem 7rem;*/
+    grid-auto-rows: auto;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-areas: "hd hd hd hd hd hd hd hd"
+                         "dp dp dp dp dp dp dp dp"
+                         "nl nl nl nl su su su su"
+                         "rp rp rp rp am am am am"
+                         "ft ft ft ft ft ft ft ft";
+    overflow: visible;
+    }
+    
+    h1{
+        font-size: 200%;
+    }
+    
+    li{
+        font-size: 130%;
+    }
+    
+    .newsbullet ul li{
+        font-size: 100%;
+    }
+    
+    .displayPh-grid{
+    display: flex;
+    flex-direction: row;
+    
+    }
+    
+    .displayPh-image img{
+    width: 80%;
+    margin: 1%;
+    border-radius: 3%;
+    }
+
+    .recipesgrid{
+    display: flex;
+    flex-direction: column;
+}
+}
+
+/*laptop*/
+
+@media (min-width:1101px) {
+    
+        .container{
+    display: grid;
+    background-color: rgb(214, 214, 214);
+    margin: 30px;
+    /*grid-template-rows: 6rem 20rem 15rem 10rem 10rem 18rem 7rem;*/
+    grid-auto-rows: auto;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-areas: "hd hd hd hd hd hd hd hd"
+                         "rp rp dp dp dp dp su su"
+                         "am am am am am nl nl nl"
+                         "ft ft ft ft ft ft ft ft";
+    overflow: visible;
+    }
+    
+        h1{
+        font-size: 250%;
+    }
+    
+    .displayPh-image h3{
+
+        font-size: 90
+    }
+    
+        li{
+        font-size: 130%;
+    }
+    
+    .newsbullet ul li{
+/*        font-size: 100%;*/
+    }
+    
+    .displayPh-grid{
+    display: flex;
+    flex-direction: row;
+    
+    }
+    
+    .displayPh-image img{
+    width: 80%;
+    margin: 1%;
+    border-radius: 3%;
+    }
+    
+    .displayPh{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+    }
+    
+    .recipesgrid{
+        flex-direction: column
+    }
+    
+    .newsSignup{
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    
+    .newsbullet{
+        flex-direction: column;
+    }
+    .recipes{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .displayPh{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .newsbullet .invbox{
+    border-top: 3px solid black;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid black;
+    border-radius:5%;
+    margin: 1% 0;
+}
+}

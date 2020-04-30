@@ -1,0 +1,126 @@
+@import url(maintenance-style.css);
+.repcontainer{
+    display: grid;
+    background-color: rgb(214, 214, 214);
+    margin: 30px;
+    /*grid-template-rows: 6rem 20rem 15rem 10rem 10rem 18rem 7rem;*/
+    grid-auto-rows: auto;
+    grid-template-columns: 33% 33% 34%;
+    overflow: hidden; 
+    border-radius: 2%;
+    grid-template-areas: "hd hd hd hd hd hd hd hd"
+                         "rp rp rp rp rp rp rp rp"
+                         "mr mr mr mr mr mr mr mr"
+                         "fi fi fi fi fi fi fi fi"
+                         "ig ig ig ig ig ig ig ig"
+                         "is is is is is is is is"
+                         "nf nf nf nf nf nf nf nf"
+                         "ft ft ft ft ft ft ft ft";
+}
+
+
+
+li{    /*difference*/
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        color: black;
+}
+ul li{   /*difference*/
+    font-family: 'Montserrat', sans-serif;
+
+    list-style: none;
+}
+
+instructions li{
+    list-style:decimal;
+}
+
+/*main recipe*/
+.mainrecipe{
+    grid-area: mr;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipecontainer{
+    text-align: center;
+}
+
+.recipephoto img{
+    max-width: 30%;
+    border-radius: 10%;
+    border: 3px solid rgb(59, 59, 59);
+}
+/*main recipe END*/
+
+/*food info box*/
+.foodinfo{
+    grid-area: fi;
+    text-align: center
+}
+/*food info box ENd*/
+
+/*ingredients box*/
+.ingredients{
+    grid-area: ig;
+}
+
+.ingredients-container{
+    
+}
+
+.ingredients-rows{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.ingredients-header{
+    text-align: center;
+}
+/*ingredients box END*/
+
+/*instructions box*/
+.instructions{
+    grid-area: is;
+    list-style-position: inside;
+    text-align: center;
+    line-height: 150%
+}
+.instructions-content ol{
+    padding: 0;
+}
+/*instructions box END*/
+
+/*nutrition facts box*/
+.nutfacts{
+    grid-area: nf;
+    text-align: center;
+}
+
+.nutfacts-content ol{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-position: inside;
+    
+}
+
+/*nutrition facts box END*/
+
+
+
+@media (min-width:1100px){
+    .repcontainer{
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-areas: "hd hd hd hd hd hd hd hd"
+                         "rp rp mr mr fi fi fi fi"
+                         "rp rp ig ig is is nf nf"
+                         "ft ft ft ft ft ft ft ft";
+    }
+    
+    .nutfacts-content ol{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: 250%
+    }
+}

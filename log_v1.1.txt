@@ -1,0 +1,12 @@
+fixes:
+*deleted <style> tags in all of the html files completely.
+*add the the <meta view port> tag to make the websites mobile friendly
+*transformed every <div class="container"> to <section> tag
+*transformed every <div class="footer"> to <footer>
+*transformed every <div class="header"> to <header>
+*I wasn't sure where to put my article tags in the html file but I inserted it in the .aboutmepara class previously
+*added a <nav> tag, inside of it an h3 tag under the logo as a visible link to the index
+*added the .recipesgrid container on every html for ease of access to every html link
+*incremented  the images folder inside the css folder to avoid the img in the .aboutmepic to disappear
+*made the css file easier to debug by importing css files, thanks to my reviewer for the handful insight.
+*the css files are now divided to 3 sections.  index-style.css <--- rep.css <-- maintenance-style.css
